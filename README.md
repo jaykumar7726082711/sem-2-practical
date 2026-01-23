@@ -136,3 +136,44 @@ cout << x;
 ```
 20
 ```
+```
+int a[5] = {2,4,6,8,10};
+int *p=a
+cout<<*p++<<"";
+cout<<*p;
+```
+```
+2
+4
+```
+write a program to swap two number using pointers
+```
+#include <iostream>
+using namespace std;
+
+void swap(int *x, int *y)
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main()
+{
+    int a, b;
+
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    swap(&a, &b);
+
+    cout << "After swapping:" << endl;
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+
+    return 0;
+}
+```
+
+   
