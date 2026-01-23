@@ -177,6 +177,35 @@ int main()
 ```
 ## Implement a simple dynamic integer variable that:Is created using newModified through a pointerProperly deleted
 ```
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // Step 1: Create a dynamic integer using new
+    int *num = new int;
+
+    // Step 2: Assign a value through the pointer
+    *num = 10;
+
+    // Step 3: Modify the value through the pointer
+    *num = *num + 5;
+
+    // Display the value
+    cout << "Value of dynamic integer: " << *num << endl;
+
+    // Step 4: Properly delete the dynamic memory
+    delete num;
+
+    // Set pointer to NULL (good practice)
+    num = NULL;
+
+    return 0;
+}
+
+```
+## output question 
+```
 int a[] = {1,2,3,4,5};
 int *p = a;
 cout << *p++ << " ";
@@ -186,6 +215,10 @@ cout << *p << "\n";
 for(int i=0;i<5;i++) cout << a[i]<< " ";
 ```
 ```
+1 2 4 4
+1 4 3 4 5
+```
+```
 int x=10;
 int *p=&x;
 cout << (*p)++ << " " << x << "\n";
@@ -193,8 +226,16 @@ cout << ++(*p) << " " << x << "\n";
 cout << *p++ << " " << x << "\n";
 ```
 ```
+10 11
+12 12
+12 12
+
+```
+```
 int a[] = {10,20,30,40,50};
 int *p = a + 1;
 cout << *(p+2) << " " << *(p-1) << "\n";
 ```
-   
+```
+40 10
+```
