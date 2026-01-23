@@ -175,5 +175,26 @@ int main()
     return 0;
 }
 ```
-
+## Implement a simple dynamic integer variable that:Is created using newModified through a pointerProperly deleted
+```
+int a[] = {1,2,3,4,5};
+int *p = a;
+cout << *p++ << " ";
+cout << (*p)++ << " ";
+cout << ++*p << " ";
+cout << *p << "\n";
+for(int i=0;i<5;i++) cout << a[i]<< " ";
+```
+```
+int x=10;
+int *p=&x;
+cout << (*p)++ << " " << x << "\n";
+cout << ++(*p) << " " << x << "\n";
+cout << *p++ << " " << x << "\n";
+```
+```
+int a[] = {10,20,30,40,50};
+int *p = a + 1;
+cout << *(p+2) << " " << *(p-1) << "\n";
+```
    
