@@ -240,7 +240,36 @@ cout << *(p+2) << " " << *(p-1) << "\n";
 40 10
 ```
 Write a C++ program to read and display elements of an array.
+```
+#include <iostream>
+#include <vector> // Using vector is often more modern/flexible, but a fixed-size array works too.
 
+int main() {
+    // 1. Declare the array size and the array
+    const int SIZE = 5;
+    int numbers[SIZE];
+
+    std::cout << "Enter " << SIZE << " integers:" << std::endl;
+
+    // 2. Read input into the array using a loop
+    for (int i = 0; i < SIZE; ++i) {
+        std::cout << "Element " << i << ": ";
+        std::cin >> numbers[i];
+    }
+
+    std::cout << "\nYou entered the following elements:" << std::endl;
+
+    // 3. Display the elements of the array using a range-based for loop
+    for (int num : numbers) {
+        std::cout << num << " ";
+    }
+
+    std::cout << std::endl;
+
+    return 0;
+}
+
+```
 Write a C++ program to find the sum of all elements in an array.
 Write a C++ program to copy one array into another.
 
